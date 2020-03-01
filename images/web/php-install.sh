@@ -1,0 +1,2 @@
+#!/bin/bash
+yum -y install php72w php72w-common php72w-xml php72w-ldap php72w-pdo php72w-gd php72w-pear php72w-intl php72w-soap php72w-cli php72w-mcrypt php72w-mbstring php72w-pecl-igbinary php72w-mysqlnd php72w-tidy php72w-opcache php72w-process php72w-pecl-redis php72w-fpm
