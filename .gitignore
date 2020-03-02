@@ -1,4 +1,4 @@
-config
-data
-logs
-www
+config/*
+data/*
+logs/*
+www/*
