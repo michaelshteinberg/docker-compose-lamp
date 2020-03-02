@@ -5,7 +5,8 @@ services:
         restart: always
         build: ./images/web/.
         ports:
-            - '8080:80'
+            - '8000:80'
+            #- '8443:443'
         links:
             - mariadb
         volumes: 
@@ -13,10 +14,10 @@ services:
             - ./logs/httpd:/etc/httpd/logs
             - ./config/vhosts:/etc/httpd/vhosts
         environment:
-            PHP_MAX_EXECUTION_TIME: 250
-            PHP_UPLOAD_MAX_FILESIZE: 1024M
-            PHP_POST_MAX_SIZE: 756M
-            PHP_MEMORY_LIMIT: 1024M
+            PHP_UPLOAD_MAX_FILESIZE: 100M
+            PHP_POST_MAX_SIZE: 1024M
+            PHP_MEMORY_LIMIT: 2048M
+            PHP_MAX_EXECUTION_TIME: 60
     mariadb:
         container_name: mariadb
         restart: always
